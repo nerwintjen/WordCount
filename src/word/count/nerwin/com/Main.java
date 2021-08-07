@@ -25,18 +25,24 @@ public class Main {
 	        catch (IOException e) {
 	            e.printStackTrace();
 	        }
-		 stringListInput.forEach(System.out::println);
+		 //stringListInput.forEach(System.out::println);
 		 //case 1 count and returns the number of words that start with "M" or "m"		 
 		 CountWords countwords1 = new CountWords(stringListInput);
 		 CharacterFilter charFilter = new CharacterFilter();
 		 charFilter.comparingCharacter(0, "m")
 		 		   .withCaseSensitivity(false);
 		 countwords1.addFilter(charFilter);
-		 System.out.printf("Number of words that starts with the letter \"m\" or \"M\" is %s",countwords1.filteredWordCount());
+		 System.out.printf("Number of words that starts with the letter \"m\" or \"M\" is %s\n",countwords1.filteredWordCount());
 		 
-		 //case 2 returns all words longer than 5 character
+		 //case 2 : returns all words longer than 5 character in other words,  6 or more character
 		 CountWords countwords2 = new CountWords(stringListInput);
 		 LengthFilter lengthFilter = new LengthFilter();
+		 lengthFilter.moreThanAndEqualTo(6);
+		 countwords2.addFilter(lengthFilter);
+		 
+		 System.out.println("Words that are longer than 5 characters are : " + countwords2.getListOfStrings());
+		 
+		 
 //		 
 //			List<String> stringListInput = 
 //			LengthFilter a = new LengthFilter();
