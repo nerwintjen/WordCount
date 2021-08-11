@@ -8,7 +8,7 @@ package word.count.nerwin.com.filter;
  *
  */
 
-public interface iFilter {
+public interface IFilter {
 
 	/**
 	 * This method checks whether or not our 

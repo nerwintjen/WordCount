@@ -3,7 +3,7 @@ package word.count.nerwin.com;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import word.count.nerwin.com.filter.iFilter;
+import word.count.nerwin.com.filter.IFilter;
 
 
 /**
@@ -30,10 +30,9 @@ public class CountWords
 	/**
 	 * Method to add filter to use in the CountWords instance.
 	 * We can combine different filters with this method, by method chaining.
-	 * @param abstractFilter Filter to be used to filter out List of Strings
 	 * @return this CountWords class instance
 	 */
-	public CountWords addFilter(iFilter ifilter){
+	public CountWords addFilter(IFilter ifilter){
 		this.listOfStrings = listOfStrings.stream()
 										  .filter(ifilter::filterCheck)
 										  .collect(Collectors.toList());	

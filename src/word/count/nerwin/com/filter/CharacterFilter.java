@@ -6,7 +6,7 @@ package word.count.nerwin.com.filter;
  * @author Nerwin Tjen
  *
  */
-public class CharacterFilter implements iFilter {
+public class CharacterFilter implements IFilter {
 	//position of string to be compared
 	private int position = -1;
 	//string to be compared
@@ -17,7 +17,7 @@ public class CharacterFilter implements iFilter {
 	/**
 	 * setting the position and character string to be compared
 	 * @param position position at the string
-	 * @param character string character 
+	 * @param input  string character
 	 * @return
 	 */
 	public CharacterFilter comparingCharacter(int position, String input) {

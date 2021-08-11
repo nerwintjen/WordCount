@@ -7,7 +7,7 @@ import word.count.nerwin.com.filter.Exception.InvalidLengthException;
  * @author Nerwin Tjen
  *
  */
-public class LengthFilter implements iFilter{
+public class LengthFilter implements IFilter{
 	private int maxLength = -1;
 	private int minLength = -1;
 	
